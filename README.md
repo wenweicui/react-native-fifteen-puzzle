@@ -11,9 +11,9 @@ A React Native app showcasing some examples using the lightweight [react-native-
 ## Quick Start iOS
 
 ```
-git clone https://github.com/wenweicui/React-Native-Puzzle-Game.git
+git clone https://github.com/wenweicui/react-native-fifteen-puzzle.git
 
-cd React-Native-Puzzle-Game
+cd react-native-fifteen-puzzle
 
 npm install
 
@@ -27,9 +27,9 @@ react-native run-ios
 ## Quick Start Android
 
 ```
-git clone https://github.com/wenweicui/React-Native-Puzzle-Game.git
+git clone https://github.com/wenweicui/react-native-fifteen-puzzle.git
 
-cd React-Native-Puzzle-Game
+cd react-native-fifteen-puzzle
 
 npm install
 
