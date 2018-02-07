@@ -3,6 +3,7 @@ package com.rngehandbook;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.cmcewen.blurview.BlurViewPackage;
 import fr.greweb.rnwebgl.RNWebGLPackage;
 import com.horcrux.svg.SvgPackage;
 import com.sensors.RNSensorsPackage;
@@ -27,6 +28,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new BlurViewPackage(),
             new RNWebGLPackage(),
             new SvgPackage(),
             new RNSensorsPackage(),
