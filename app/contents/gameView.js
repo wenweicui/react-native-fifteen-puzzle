@@ -62,6 +62,7 @@ export default class RigidBodies extends Component {
     const { width, height } = Dimensions.get("window");
     const boxSize = Math.trunc(Math.max(width, height) * 0.075);
     let mode = this.props.navigation.state.params.mode;
+    const {goBack} = this.props.navigation;
     return (
       <View style={{flex:1}}>
         <Modal
@@ -108,13 +109,15 @@ export default class RigidBodies extends Component {
           </View>
           <View style={{flexDirection:'row',backgroundColor:'green',flex:1}}>
             <TouchableHighlight
-              onPress={!this.state.gameReset ? this.resetStopwatch : null}
-              style={[!this.state.gameReset ? {backgroundColor:'#505050'} : {backgroundColor:'#848484'},{flex:1,alignItems:'center',justifyContent:'center'}]}
+              onPress={!this.state.gameReset ? this.resetStopwatch : () => goBack()}
+              style={[!this.state.gameReset ? {backgroundColor:'#505050'} : {backgroundColor:'#767676'},{flex:1,alignItems:'center',justifyContent:'center'}]}
               activeOpacity={0.8}
               underlayColor={'#404040'}>
               <View>
-                <Text style={styles.btnText}>RETRY</Text>
-                <Text style={styles.btnTextSmall}>CHANCE: {!this.state.gameReset ? '1' : '0'}</Text>
+                <Text style={styles.btnText}>{!this.state.gameReset ? 'RETRY' : 'GIVE UP'}</Text>
+                {!this.state.gameReset ?
+                <Text style={styles.btnTextSmall}>CHANCE: 1</Text>
+                : null}
               </View>
             </TouchableHighlight>
             <TouchableHighlight

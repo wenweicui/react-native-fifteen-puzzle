@@ -2,11 +2,11 @@ var React = require('react');
 var GameBoard = require('./GameBoard');
 var GameHelpers = require('./GameHelpers');
 var Modal = require('./Modal');
-var FontedText = require('./FontedText');
 
 import {
   StyleSheet,
   View,
+  Text,
   TouchableOpacity,
 } from "react-native";
 
@@ -65,13 +65,13 @@ var Game = React.createClass({
             tilesVisible={this.state.tilesVisible}/>
         </View>
 
-        <Modal isOpen={GameHelpers.isWon(this.state.indexes, this.props.gameMode)}>
+        <Modal isOpen={GameHelpers.isWon(this.state.indexes, this.props.gameMode)} style={{zIndex:999}}>
           <View style={styles.wonDialog}>
-            <FontedText style={styles.header}>Hooray!</FontedText>
-            <FontedText style={styles.header2}>Once again?</FontedText>
+            <Text style={styles.header}>Hooray!</Text>
+            <Text style={styles.header2}>Once again?</Text>
             <TouchableOpacity onPress={this.onNewGame}>
               <View style={styles.buttonWrapper}>
-                <FontedText style={styles.button}>Play again</FontedText>
+                <Text style={styles.button}>Play again</Text>
               </View>
             </TouchableOpacity>
           </View>

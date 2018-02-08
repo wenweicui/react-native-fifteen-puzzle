@@ -1,11 +1,11 @@
 var React = require('react');
 var Dot = require('./Dot');
-var FontedText = require('./FontedText');
 
 import {
   StyleSheet,
   View,
   Animated,
+  Text,
   PanResponder,
   } from "react-native";
 
@@ -13,8 +13,8 @@ import {
 var Tile = React.createClass({
   propTypes: {
     coordinates: React.PropTypes.object.isRequired,
-    axis: React.PropTypes.string.isRequired,
-    direction: React.PropTypes.number.isRequired,
+    axis: React.PropTypes.string,
+    direction: React.PropTypes.number,
     size: React.PropTypes.number.isRequired,
     isPlacedCorrectly: React.PropTypes.bool.isRequired,
     visible: React.PropTypes.bool.isRequired,
@@ -108,7 +108,7 @@ var Tile = React.createClass({
         {...this._panResponder.panHandlers}>
         <View style={styles.row}/>
         <View style={styles.row}>
-          <FontedText style={styles.text}>{ this.props.index }</FontedText>
+          <Text style={styles.text}>{ this.props.index }</Text>
         </View>
         <View style={[styles.row, styles.dotRow]}>
           <Dot isPlacedCorrectly={this.props.isPlacedCorrectly}/>
