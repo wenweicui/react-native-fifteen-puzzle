@@ -54,7 +54,7 @@ export default class TableOfContents extends Component {
     return (
       <LinearGradient
         colors={["#1CD8D2", "#93EDC7"]}
-        style={css.linearGradient}
+        style={styles.linearGradient}
       >
 
         <GameEngine
@@ -69,78 +69,77 @@ export default class TableOfContents extends Component {
             DegenerateParticles
           ]}
         >
-          <Animated.ScrollView
-            bounces={false}
+          <View
             style={{backgroundColor:'transparent'}}
-            scrollEventThrottle={16}
-            onScroll={Animated.event(
-             [{nativeEvent: {contentOffset: {y: this.state.scrollY}}}]
-           )}
           >
             <StatusBar hidden={false} barStyle={"light-content"} />
-            <View style={css.container}>
-              <View style={css.logoContainer}>
-                <Image style={css.logo} source={Logo} />
-                <Text style={css.logoText}>Fifteen Puzzle</Text>
+            <View style={styles.container}>
+              <View style={styles.logoContainer}>
+                <Image style={styles.logo} source={Logo} />
+                <View>
+                  <Text style={styles.logoText}>Fifteen Puzzle</Text>
+                  <Text style={styles.logoTextSmall}>Powered by Wenwei Cui</Text>
+                </View>
               </View>
               <Animatable.View
-                style={css.headingContainer}
+                style={styles.headingContainer}
                 animation='bounceInDown'
               >
-                <Text style={[css.userDetail,css.borde]}>Welcome back, William</Text>
-                <Text style={css.userDetail}>Your Today’s Global Rank is</Text>
-                <Text style={[css.userDetail,css.borde]}>#10292</Text>
+                <Text style={[styles.userDetail,styles.borde]}>Welcome back, William</Text>
               </Animatable.View>
               <Animatable.View animation='bounceInUp'>
                 <TouchableOpacity
-                  style={[css.card, {backgroundColor:'#52B3D9'}]}
+                  style={[styles.card, {backgroundColor:'#52B3D9'}]}
                   onPress={() =>
                     this.props.navigation.navigate('GameView', {mode:3})
                 }>
-                  <View style={css.cardTextContainer}>
-                    <Text style={css.cardTextBold}>3X3</Text>
-                    <Text style={css.cardText}>Beginner</Text>
+                  <View style={styles.cardTextContainer}>
+                    <Text style={styles.cardTextBold}>3X3</Text>
+                    <Text style={styles.cardText}>Beginner</Text>
                   </View>
                   <View>
-                    <Image style={css.icon} source={Icon3} />
+                    <Image style={styles.icon} source={Icon3} />
                   </View>
                 </TouchableOpacity>
                 <TouchableOpacity
-                  style={[css.card, {backgroundColor:'#fac65f'}]}
+                  style={[styles.card, {backgroundColor:'#fac65f'}]}
                   onPress={() =>
                     this.props.navigation.navigate('GameView', {mode:4})
                 }>
-                  <View style={css.cardTextContainer}>
-                    <Text style={css.cardTextBold}>4X4</Text>
-                    <Text style={css.cardText}>Intermediate</Text>
+                  <View style={styles.cardTextContainer}>
+                    <Text style={styles.cardTextBold}>4X4</Text>
+                    <Text style={styles.cardText}>Intermediate</Text>
                   </View>
                   <View>
-                    <Image style={css.icon} source={Icon4} />
+                    <Image style={styles.icon} source={Icon4} />
                   </View>
                 </TouchableOpacity>
                 <TouchableOpacity
-                  style={[css.card, {backgroundColor:'#fb8390'}]}
+                  style={[styles.card, {backgroundColor:'#fb8390'}]}
                   onPress={() =>
                     this.props.navigation.navigate('GameView', {mode:5})
                 }>
-                  <View style={css.cardTextContainer}>
-                    <Text style={css.cardTextBold}>5X5</Text>
-                    <Text style={css.cardText}>Advanced</Text>
+                  <View style={styles.cardTextContainer}>
+                    <Text style={styles.cardTextBold}>5X5</Text>
+                    <Text style={styles.cardText}>Advanced</Text>
                   </View>
                   <View>
-                    <Image style={css.icon} source={Icon5} />
+                    <Image style={styles.icon} source={Icon5} />
                   </View>
                 </TouchableOpacity>
+                <View style={styles.rankContainer}>
+                  <Text style={[styles.userDetail,styles.borde]}>Your Today’s Global Rank </Text>
+                </View>
               </Animatable.View>
             </View>
-          </Animated.ScrollView>
+          </View>
         </GameEngine>
       </LinearGradient>
     );
   }
 }
 
-const css = StyleSheet.create({
+const styles = StyleSheet.create({
   linearGradient: {
     flex: 1
   },
@@ -161,7 +160,13 @@ const css = StyleSheet.create({
   logoText: {
     color:'#fff',
     fontFamily:'Silom',
-    fontSize:30,
+    fontSize:32,
+    paddingLeft:20
+  },
+  logoTextSmall: {
+    color:'#fff',
+    fontFamily:'Silom',
+    fontSize:16,
     paddingLeft:20
   },
   headingContainer: {
@@ -173,11 +178,14 @@ const css = StyleSheet.create({
   userDetail: {
     color:'white',
     fontSize:22,
-    fontWeight:'300',
+    fontWeight:'400',
     marginTop:5,
   },
   borde: {
-    fontWeight:"500"
+    fontWeight:"600"
+  },
+  underLine: {
+    textDecorationLine: 'underline'
   },
   card: {
     backgroundColor:'transparent',
@@ -201,6 +209,17 @@ const css = StyleSheet.create({
   },
   cardTextContainer: {
     paddingTop:10
+  },
+  rankContainer: {
+    alignSelf: "center",
+    alignItems: "center",
+    width: SCREEN_WIDTH - 40,
+    backgroundColor:'#d593bb',
+    padding:15,
+    paddingTop:20,
+    borderTopLeftRadius:20,
+    borderTopRightRadius:20,
+    paddingBottom: 30
   }
 });
 
