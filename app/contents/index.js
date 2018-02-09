@@ -15,7 +15,10 @@ import Logo from "./images/logo2.png";
 import Icon3 from "./images/icon3.png";
 import Icon4 from "./images/icon4.png";
 import Icon5 from "./images/icon5.png";
+import RightArrow from "./images/right-arrow.png";
+import Rank from "./images/ranking.png";
 import GameView from "./gameView";
+import LeaderBoard from "./leaderBoard";
 const SCREEN_WIDTH = Dimensions.get('window').width;
 import {
   StackNavigator,
@@ -90,6 +93,7 @@ export default class TableOfContents extends Component {
               <Animatable.View animation='bounceInUp'>
                 <TouchableOpacity
                   style={[styles.card, {backgroundColor:'#52B3D9'}]}
+                  activeOpacity={0.7}
                   onPress={() =>
                     this.props.navigation.navigate('GameView', {mode:3})
                 }>
@@ -102,6 +106,7 @@ export default class TableOfContents extends Component {
                   </View>
                 </TouchableOpacity>
                 <TouchableOpacity
+                  activeOpacity={0.7}
                   style={[styles.card, {backgroundColor:'#fac65f'}]}
                   onPress={() =>
                     this.props.navigation.navigate('GameView', {mode:4})
@@ -115,6 +120,7 @@ export default class TableOfContents extends Component {
                   </View>
                 </TouchableOpacity>
                 <TouchableOpacity
+                  activeOpacity={0.7}
                   style={[styles.card, {backgroundColor:'#fb8390'}]}
                   onPress={() =>
                     this.props.navigation.navigate('GameView', {mode:5})
@@ -127,9 +133,15 @@ export default class TableOfContents extends Component {
                     <Image style={styles.icon} source={Icon5} />
                   </View>
                 </TouchableOpacity>
-                <View style={styles.rankContainer}>
-                  <Text style={[styles.userDetail,styles.borde]}>Your Today’s Global Rank </Text>
-                </View>
+                <TouchableOpacity
+                  activeOpacity={0.7}
+                  style={styles.rankContainer}
+                  onPress={() =>
+                    this.props.navigation.navigate('LeaderBoard', {})
+                }>
+                  <Image style={styles.rankIcon} source={Rank} />
+                  <Text style={[styles.userDetail,styles.borde]}>Today’s Global Rank </Text>
+                </TouchableOpacity>
               </Animatable.View>
             </View>
           </View>
@@ -211,15 +223,26 @@ const styles = StyleSheet.create({
     paddingTop:10
   },
   rankContainer: {
-    alignSelf: "center",
+    flexDirection:'row',
     alignItems: "center",
+    justifyContent:'center',
     width: SCREEN_WIDTH - 40,
-    backgroundColor:'#d593bb',
+    backgroundColor:'#77d795',
     padding:15,
-    paddingTop:20,
+    paddingTop:10,
     borderTopLeftRadius:20,
     borderTopRightRadius:20,
     paddingBottom: 30
+  },
+  arrow: {
+    marginTop:5,
+    width:25,
+    height:25
+  },
+  rankIcon: {
+    marginRight: 20,
+    width:50,
+    height:50
   }
 });
 
@@ -237,5 +260,11 @@ const appNavigator = StackNavigator({
       header:null,
     }
   },
+  LeaderBoard: {
+    screen: LeaderBoard,
+    navigationOptions: {
+      header:null,
+    }
+  }
 });
 module.exports = appNavigator;
