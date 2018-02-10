@@ -8,6 +8,7 @@ import {
   Alert,
   Sprinkles,
   Motion,
+  AsyncStorage,
   DegenerateParticles
 } from "./systems";
 import LottieView from 'lottie-react-native';
@@ -19,7 +20,6 @@ import Icon4 from "./images/icon4.png";
 import Icon5 from "./images/icon5.png";
 import RightArrow from "./images/right-arrow.png";
 import Rank from "./images/ranking.png";
-import GameView from "./gameView";
 import Leaderboard from 'react-native-leaderboard';
 import { ButtonGroup } from 'react-native-elements';
 const SCREEN_WIDTH = Dimensions.get('window').width;

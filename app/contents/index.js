@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StatusBar, View, StyleSheet, ScrollView, Image, Text, TouchableOpacity,Dimensions, Animated } from "react-native";
+import { StatusBar, View, StyleSheet, ScrollView, Image, Text, TouchableOpacity,Dimensions, Animated,Modal } from "react-native";
 import { GameEngine } from "react-native-game-engine";
 import {
   SpawnParticles,
@@ -17,13 +17,13 @@ import Icon4 from "./images/icon4.png";
 import Icon5 from "./images/icon5.png";
 import RightArrow from "./images/right-arrow.png";
 import Rank from "./images/ranking.png";
-import GameView from "./gameView";
-import LeaderBoard from "./leaderBoard";
+import GameView from "./GameView";
+import LeaderBoard from "./LeaderBoard";
 const SCREEN_WIDTH = Dimensions.get('window').width;
 import {
   StackNavigator,
 } from 'react-navigation';
-
+import LottieView from 'lottie-react-native';
 const HEADER_SCROLL_DISTANCE = 36;
 const HEADER_SCROLL_DISTANCE_MAX = 73;
 
@@ -32,6 +32,7 @@ export default class TableOfContents extends Component {
     super(props);
     this.state = {
       scrollY: new Animated.Value(0),
+      modalVisible: false,
     };
   }
 
@@ -54,12 +55,40 @@ export default class TableOfContents extends Component {
       outputRange: [0,0,1],
       extrapolate: 'clamp',
     });
+    const modalVisible = this.state.modalVisible;
     return (
       <LinearGradient
         colors={["#1CD8D2", "#93EDC7"]}
         style={styles.linearGradient}
       >
-
+        <Modal
+          visible={modalVisible}
+          >
+          <LinearGradient
+            colors={["#1CD8D2", "#93EDC7"]}
+            style={styles.linearGradient}
+          >
+          <View style={{flex: 1, paddingTop: (SCREEN_WIDTH / 2 - 100),alignItems: 'center'}}>
+            <View style={{width: 350, height: 250,}}>
+              <LottieView
+                ref={animation => animation && animation.play()}
+                style={{width: 350, height: 250}}
+                source={require('.././lottie/trophy.json')}
+              />
+            </View>
+            <Text style={{color:'#fff',fontSize:32,textAlign:'center',paddingTop:40,fontWeight:"500"}}>Sorry, LeaderBoard currently disabled</Text>
+            <TouchableOpacity
+              activeOpacity={0.7}
+              style={styles.modalBtn}
+              onPress={() =>
+                // this.props.navigation.navigate('LeaderBoard', {})
+                this.setState({modalVisible:false})
+            }>
+              <Text style={{color:'#fff',fontSize:26,fontWeight:"500"}}>Come On</Text>
+            </TouchableOpacity>
+           </View>
+         </LinearGradient>
+        </Modal>
         <GameEngine
           ref={"engine"}
           running={!this.props.sceneVisible}
@@ -88,7 +117,7 @@ export default class TableOfContents extends Component {
                 style={styles.headingContainer}
                 animation='bounceInDown'
               >
-                <Text style={[styles.userDetail,styles.borde]}>Welcome back, William</Text>
+                <Text style={[styles.userDetail,styles.borde]}>Welcome back, Challenger</Text>
               </Animatable.View>
               <Animatable.View animation='bounceInUp'>
                 <TouchableOpacity
@@ -137,7 +166,8 @@ export default class TableOfContents extends Component {
                   activeOpacity={0.7}
                   style={styles.rankContainer}
                   onPress={() =>
-                    this.props.navigation.navigate('LeaderBoard', {})
+                    // this.props.navigation.navigate('LeaderBoard', {})
+                    this.setState({modalVisible:true})
                 }>
                   <Image style={styles.rankIcon} source={Rank} />
                   <Text style={[styles.userDetail,styles.borde]}>Today’s Global Rank </Text>
@@ -243,6 +273,15 @@ const styles = StyleSheet.create({
     marginRight: 20,
     width:50,
     height:50
+  },
+  modalBtn: {
+    alignItems: "center",
+    justifyContent:'center',
+    marginTop:60,
+    padding:15,
+    backgroundColor:'#52B3D9',
+    width: SCREEN_WIDTH - 100,
+    borderRadius:50,
   }
 });
 

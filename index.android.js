@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { AppRegistry, View, Modal } from "react-native";
 
-import Index from "./app/contents/index";
+import Index from "./app/contents/Index";
 
 export default class RNGEHandbook extends Component {
   constructor(props) {

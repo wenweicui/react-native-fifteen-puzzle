@@ -24,6 +24,7 @@
     "react-native-countdown-circle": "^3.0.0",
     "react-native-elements": "^0.19.0",
     "react-native-extended-stylesheet": "git+https://github.com/bberak/react-native-extended-stylesheet.git",
+    "react-native-game-center": "^1.2.3",
     "react-native-game-engine": "git+https://github.com/bberak/react-native-game-engine.git#updating-state",
     "react-native-leaderboard": "^1.0.4",
     "react-native-linear-gradient": "^2.0.0",

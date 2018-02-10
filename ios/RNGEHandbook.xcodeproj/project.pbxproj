@@ -50,6 +50,7 @@
 		7F0154BF41D345B69CA6D1A1 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4897C4A123244A52BEDD7666 /* EvilIcons.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8765A77DA1FC47239B2993C1 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C7F2D763BE9451F98E394F7 /* Feather.ttf */; };
+		94FDCE8FC0BC482286C02C00 /* libRNGameCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 143BD6CBB4B546F3B20DCF12 /* libRNGameCenter.a */; };
 		A13A6B661F81D0250052F958 /* libRNWebGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A13A6B651F81CFE00052F958 /* libRNWebGL.a */; };
 		A96254AB9E9B4DFFBA94C51F /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AADD43EF5C934C799CCD026C /* libRNSVG.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
@@ -222,6 +223,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 62CA59B71E3C173B002D7188;
 			remoteInfo = Lottie_iOS;
+		};
+		386BC579202E94D900883D17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A44D8970B26D40669904230B /* RNGameCenter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNGameCenter;
 		};
 		38EBFC5B202AF9E400E153CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -477,6 +485,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RNGEHandbook/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNGEHandbook/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNGEHandbook/main.m; sourceTree = "<group>"; };
+		143BD6CBB4B546F3B20DCF12 /* libRNGameCenter.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGameCenter.a; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		1C7F2D763BE9451F98E394F7 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		1CB2265906FB42578FABAFA1 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
@@ -498,6 +507,7 @@
 		971A922F4DA248EF8DB4D4B5 /* libRNSensors.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSensors.a; sourceTree = "<group>"; };
 		9EA843B9FF77450596EC99F6 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		A0A3A5D1059C47B2BD2E87F2 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		A44D8970B26D40669904230B /* RNGameCenter.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGameCenter.xcodeproj; path = "../node_modules/react-native-game-center/RNGameCenter/ios/RNGameCenter.xcodeproj"; sourceTree = "<group>"; };
 		AADD43EF5C934C799CCD026C /* libRNSVG.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSVG.a; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		B0545A42DB6C401B832C5B96 /* LottieReactNative.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = LottieReactNative.xcodeproj; path = "../node_modules/lottie-react-native/lib/ios/LottieReactNative.xcodeproj"; sourceTree = "<group>"; };
@@ -546,6 +556,7 @@
 				F916FC27874643259C697E6B /* libRNVectorIcons.a in Frameworks */,
 				729DFFFD1FC34668A2BBB992 /* libLottie.a in Frameworks */,
 				18BC184C3FB9411F8606AF1C /* libLottieReactNative.a in Frameworks */,
+				94FDCE8FC0BC482286C02C00 /* libRNGameCenter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,6 +728,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		386BC576202E94D800883D17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				386BC57A202E94D900883D17 /* libRNGameCenter.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		38EBFC31202AF9E100E153CB /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -727,6 +746,7 @@
 				1CB2265906FB42578FABAFA1 /* libRNVectorIcons.a */,
 				CE2AF5CF07CA49758EB073EC /* libLottie.a */,
 				112E630B704E4C60AF287665 /* libLottieReactNative.a */,
+				143BD6CBB4B546F3B20DCF12 /* libRNGameCenter.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -781,6 +801,7 @@
 				67D64A3477AA41C3AFE5516F /* RNVectorIcons.xcodeproj */,
 				C81753F91AF0401CA0D90670 /* Lottie.xcodeproj */,
 				B0545A42DB6C401B832C5B96 /* LottieReactNative.xcodeproj */,
+				A44D8970B26D40669904230B /* RNGameCenter.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1064,6 +1085,10 @@
 					ProjectRef = 2ABBC12308564479BEAE5D01 /* RNBlur.xcodeproj */;
 				},
 				{
+					ProductGroup = 386BC576202E94D800883D17 /* Products */;
+					ProjectRef = A44D8970B26D40669904230B /* RNGameCenter.xcodeproj */;
+				},
+				{
 					ProductGroup = A1C35BF21F7FB34000E2BF7F /* Products */;
 					ProjectRef = E9C512D192D945DF8438202E /* RNSensors.xcodeproj */;
 				},
@@ -1229,6 +1254,13 @@
 			fileType = archive.ar;
 			path = libLottieReactNative.a;
 			remoteRef = 386BC4B5202D1D2A00883D17 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		386BC57A202E94D900883D17 /* libRNGameCenter.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNGameCenter.a;
+			remoteRef = 386BC579202E94D900883D17 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		38EBFC5C202AF9E400E153CB /* libRNBlur.a */ = {
@@ -1614,12 +1646,14 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/lottie-ios/lottie-ios/Classes/**",
 					"$(SRCROOT)/../node_modules/lottie-react-native/lib/ios/LottieReactNative",
+					"$(SRCROOT)/../node_modules/react-native-game-center/RNGameCenter/ios",
 				);
 				INFOPLIST_FILE = RNGEHandbookTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1654,12 +1688,14 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/lottie-ios/lottie-ios/Classes/**",
 					"$(SRCROOT)/../node_modules/lottie-react-native/lib/ios/LottieReactNative",
+					"$(SRCROOT)/../node_modules/react-native-game-center/RNGameCenter/ios",
 				);
 				INFOPLIST_FILE = RNGEHandbookTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1695,6 +1731,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/lottie-ios/lottie-ios/Classes/**",
 					"$(SRCROOT)/../node_modules/lottie-react-native/lib/ios/LottieReactNative",
+					"$(SRCROOT)/../node_modules/react-native-game-center/RNGameCenter/ios",
 				);
 				INFOPLIST_FILE = RNGEHandbook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1724,6 +1761,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/lottie-ios/lottie-ios/Classes/**",
 					"$(SRCROOT)/../node_modules/lottie-react-native/lib/ios/LottieReactNative",
+					"$(SRCROOT)/../node_modules/react-native-game-center/RNGameCenter/ios",
 				);
 				INFOPLIST_FILE = RNGEHandbook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1759,11 +1797,13 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/lottie-ios/lottie-ios/Classes/**",
 					"$(SRCROOT)/../node_modules/lottie-react-native/lib/ios/LottieReactNative",
+					"$(SRCROOT)/../node_modules/react-native-game-center/RNGameCenter/ios",
 				);
 				INFOPLIST_FILE = "RNGEHandbook-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1807,11 +1847,13 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/lottie-ios/lottie-ios/Classes/**",
 					"$(SRCROOT)/../node_modules/lottie-react-native/lib/ios/LottieReactNative",
+					"$(SRCROOT)/../node_modules/react-native-game-center/RNGameCenter/ios",
 				);
 				INFOPLIST_FILE = "RNGEHandbook-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1856,6 +1898,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.RNGEHandbook-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1880,6 +1923,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
